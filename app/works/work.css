@@ -25,11 +25,31 @@
   z-index: 0;
   opacity: 0;
   filter: brightness(1.18);
-  transition: opacity 0.8s ease;
+  animation: reelFade 24s infinite;
 }
-.reel__backdrop.is-shown {
-  opacity: 1;
-  z-index: 1;
+/* 12 backdrops, each shown ~2s of the 24s loop */
+.reel__backdrop:nth-child(1) { animation-delay: 0s; }
+.reel__backdrop:nth-child(2) { animation-delay: 2s; }
+.reel__backdrop:nth-child(3) { animation-delay: 4s; }
+.reel__backdrop:nth-child(4) { animation-delay: 6s; }
+.reel__backdrop:nth-child(5) { animation-delay: 8s; }
+.reel__backdrop:nth-child(6) { animation-delay: 10s; }
+.reel__backdrop:nth-child(7) { animation-delay: 12s; }
+.reel__backdrop:nth-child(8) { animation-delay: 14s; }
+.reel__backdrop:nth-child(9) { animation-delay: 16s; }
+.reel__backdrop:nth-child(10) { animation-delay: 18s; }
+.reel__backdrop:nth-child(11) { animation-delay: 20s; }
+.reel__backdrop:nth-child(12) { animation-delay: 22s; }
+@keyframes reelFade {
+  0% { opacity: 0; }
+  1.5% { opacity: 1; }
+  7% { opacity: 1; }
+  8.5% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reel__backdrop { animation: none; }
+  .reel__backdrop:nth-child(1) { opacity: 1; }
 }
 .reel__scrim {
   position: absolute;
@@ -114,15 +134,19 @@
   gap: 0.7rem;
   width: max-content;
   padding-bottom: 6px;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
+  animation: reelMarquee 40s linear infinite;
 }
-.reel__cards-track.is-instant {
-  transition: none;
+.reel__cards:hover .reel__cards-track {
+  animation-play-state: paused;
+}
+@keyframes reelMarquee {
+  to {
+    transform: translateX(-50%);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .reel__cards-track {
-    transition: none;
+    animation: none;
   }
 }
 .reel__card {

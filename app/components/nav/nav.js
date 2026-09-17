@@ -1,38 +1,10 @@
-"use client";
-
 import "./nav.css";
-import { useEffect, useState } from "react";
 
+/* Static nav — no JavaScript. In-page links use CSS smooth-scroll
+   (see html { scroll-behavior } and .home section scroll-margin in home.css). */
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-
-  // transparent at the top, gains its background once you scroll
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // in-page links (#home, #works, …) scroll smoothly WITHOUT putting the
-  // hash in the address bar. Delegated on document, so it covers every
-  // anchor on the page (nav, hero, footer, …).
-  useEffect(() => {
-    const onClick = (e) => {
-      const link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-      const id = link.getAttribute("href").slice(1);
-      const target = document.getElementById(id);
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
-  }, []);
-
   return (
-    <header className={"home__nav" + (scrolled ? " scrolled" : "")}>
+    <header className="home__nav">
       <div className="home__nav-inner">
         <a className="home__brand" href="#home">
           Cliché <small>Pictures</small>
