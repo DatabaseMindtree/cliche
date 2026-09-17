@@ -1,0 +1,69 @@
+/* ==================================================================
+   Contact — pitch on the left, contact details on the right
+   (phone, location, social).
+   Uses the shared tokens defined on .home (see home/home.css).
+   ================================================================== */
+
+.home__contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 7vw, 5rem);
+  align-items: start;
+}
+.home__pitch {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.home__pitch em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* details column */
+.home__contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.home__contact-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+.home__contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-45);
+  margin-bottom: 0.3rem;
+}
+.home__contact-group a {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: border-color 0.25s ease, letter-spacing 0.25s ease;
+}
+.home__contact-group a:hover {
+  border-color: var(--ink);
+  letter-spacing: 0.06em;
+}
+.home__contact-text {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--ink-70);
+}
+
+@media (max-width: 860px) {
+  .home__contact {
+    grid-template-columns: 1fr;
+  }
+}

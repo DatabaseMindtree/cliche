@@ -1,0 +1,95 @@
+/* ==================================================================
+   Nav — transparent over the hero, black once you scroll.
+   Uses the shared tokens defined on .home (see home/home.css).
+   ================================================================== */
+
+.home__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.home__nav.scrolled {
+  background: var(--ink);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+.home__nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.home__brand {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-decoration: none;
+}
+.home__brand small {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 0.5ch;
+}
+.home__links {
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  list-style: none;
+}
+.home__links a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  position: relative;
+  padding-block: 0.4rem;
+  transition: color 0.2s ease;
+}
+.home__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: #fff;
+  transition: width 0.28s ease;
+}
+.home__links a:hover {
+  color: #fff;
+}
+.home__links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .home__links {
+    gap: 1rem;
+    font-size: 0.7rem;
+  }
+  .home__links a {
+    letter-spacing: 0.08em;
+  }
+}
+@media (max-width: 420px) {
+  .home__links {
+    display: none;
+  }
+}

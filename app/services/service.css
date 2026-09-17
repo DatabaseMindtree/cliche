@@ -1,0 +1,52 @@
+/* ==================================================================
+   Services — "What We Do" cards.
+   Uses the shared tokens defined on .home (see home/home.css).
+   ================================================================== */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+.service {
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--ink);
+  transition: transform 0.3s ease;
+}
+.service:hover {
+  transform: translateY(-4px);
+}
+.service__no {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+}
+.service__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.7rem;
+}
+.service__desc {
+  margin: 0;
+  color: var(--ink-70);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 34ch;
+}
+
+@media (max-width: 860px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
