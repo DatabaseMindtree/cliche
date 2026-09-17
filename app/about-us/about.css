@@ -62,6 +62,9 @@
   display: grid;
   gap: clamp(1rem, 1.8vw, 1.6rem);
 }
+.home__team-row + .home__team-row {
+  margin-top: clamp(1rem, 1.8vw, 1.6rem);
+}
 .home__team-row--4 {
   grid-template-columns: repeat(4, 1fr);
 }

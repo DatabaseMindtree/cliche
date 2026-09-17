@@ -2,20 +2,22 @@ import "./about.css";
 
 /* Edit names/roles here. Add `img: "/team/xxx.jpg"` to any person to
    fill their card with a photo (files go in /public/team). */
-const DIRECTORS = [
-  { name: "Full Name", role: "Director" },
-  { name: "Full Name", role: "Director" },
-  { name: "Full Name", role: "Director" },
-  { name: "Full Name", role: "Director" },
+/* first row — the 4 owners */
+const OWNERS = [
+  { name: "Full Name", role: "Founder & Director" },
+  { name: "Full Name", role: "Co-Founder & Producer" },
+  { name: "Full Name", role: "Co-Founder & Editor" },
+  { name: "Full Name", role: "Co-Founder & Cinematographer" },
 ];
 
-const TEAM = [
-  { name: "Full Name", role: "Producer" },
+/* second row — the rest of the crew */
+const CREW = [
   { name: "Full Name", role: "Cinematographer" },
   { name: "Full Name", role: "Editor" },
   { name: "Full Name", role: "Colorist" },
   { name: "Full Name", role: "Sound Design" },
   { name: "Full Name", role: "Production" },
+  { name: "Full Name", role: "Writer" },
 ];
 
 function PersonIcon() {
@@ -51,15 +53,15 @@ export default function About() {
       {/* intro */}
       <div className="home__about">
         <p className="home__lead">
-          We are a small crew of directors, producers and editors who believe the{" "}
-          <em>best stories are the honest ones</em> — shot with patience, cut with
-          restraint.
+          We&apos;re a small crew of filmmakers who believe the{" "}
+          <em>best stories are the honest ones</em> — written with care, shot with
+          patience, and cut with restraint.
         </p>
         <p className="home__body">
-          Founded in 2014, Cliché Pictures produces feature films, documentaries
-          and commercial work for clients who want more than a moving image. We
-          control every step in-house — from development through color and sound —
-          so the finished film keeps the texture it started with.
+          Cliché Pictures is a young studio, started in 2026, working across film,
+          documentary, microdrama and branded content. We keep every step in-house
+          — writing, direction, edit, VFX and sound — so each project keeps the
+          texture it started with, from first frame to final cut.
         </p>
       </div>
 
@@ -67,24 +69,23 @@ export default function About() {
       <div className="home__team">
         <div className="home__team-block">
           <div className="home__team-head">
-            <h3 className="home__team-title">Directors</h3>
-            <span className="home__team-count">04</span>
+            <h3 className="home__team-title">Our Team</h3>
+            <span className="home__team-count">
+              {String(OWNERS.length + CREW.length).padStart(2, "0")}
+            </span>
           </div>
+
+          {/* row 1 — owners (4) */}
           <div className="home__team-row home__team-row--4">
-            {DIRECTORS.map((m, i) => (
-              <Member key={i} {...m} />
+            {OWNERS.map((m, i) => (
+              <Member key={"o" + i} {...m} />
             ))}
           </div>
-        </div>
 
-        <div className="home__team-block">
-          <div className="home__team-head">
-            <h3 className="home__team-title">The Team</h3>
-            <span className="home__team-count">06</span>
-          </div>
+          {/* row 2 — crew (6) */}
           <div className="home__team-row home__team-row--6">
-            {TEAM.map((m, i) => (
-              <Member key={i} {...m} />
+            {CREW.map((m, i) => (
+              <Member key={"c" + i} {...m} />
             ))}
           </div>
         </div>
