@@ -2,7 +2,8 @@ import "./contact.css";
 
 export default function Contact() {
   return (
-    <section id="contact" className="home__section wrap">
+    <section id="contact" className="home__section home__contact-section">
+      <div className="home__contact-inner wrap">
       <div className="home__head">
         <p className="home__kicker">Say Hello</p>
         <h2 className="home__section-title">Contact</h2>
@@ -18,22 +19,29 @@ export default function Contact() {
         <div className="home__contact-details">
           <div className="home__contact-group">
             <span className="home__contact-label">Phone</span>
-            <a href="tel:+10000000000">+1 (000) 000-0000</a>
-            <a href="tel:+910000000000">+91 00000 00000</a>
+            <a href="+91 9544418140">+91 9544418140</a>
+            <a href="tel:+91 9656204531">+91 9656204531</a>
           </div>
 
           <div className="home__contact-group">
             <span className="home__contact-label">Location</span>
-            <span className="home__contact-text">Kochi, Kerala — India</span>
+            <a
+              href="https://www.google.com/maps/search/Olivet+MC+Road+Panavely+Kottarakkara+Kollam+Kerala/@8.9852771,76.7862125,14.26z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Olivet, MC Road, Panavely ↗
+            </a>
+            <span className="home__contact-text">Kottarakkara, Kollam — Kerala, India</span>
           </div>
 
           <div className="home__contact-group">
             <span className="home__contact-label">Social</span>
-            <a href="#works">Instagram ↗</a>
-            <a href="#works">Vimeo ↗</a>
-            <a href="#works">YouTube ↗</a>
+            <a href="https://www.instagram.com/cliche.pictures?stkn=MTNuZW10MDQ4azM0dQ==">Instagram ↗</a>
+            <a href="https://www.youtube.com/@ClichePictures">YouTube ↗</a>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

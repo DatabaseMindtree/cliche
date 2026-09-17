@@ -24,16 +24,21 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Studio</h4>
-          <a href="mailto:hello@clichepictures.com">hello@clichepictures.com</a>
-          <a href="tel:+10000000000">+1 (000) 000-0000</a>
-          <span className="footer__muted">Kochi, India</span>
+          <a href="mailto:hello@clichepictures.com">clichepictures26@gmail.com</a>
+          <a href="tel:+10000000000">+91 9544418140</a>
+          <a
+            href="https://www.google.com/maps/search/Olivet+MC+Road+Panavely+Kottarakkara+Kollam+Kerala/@8.9852771,76.7862125,14.26z"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Panavely, Kollam ↗
+          </a>
         </div>
 
         <div className="footer__col">
           <h4>Follow</h4>
-          <a href="#works">Instagram ↗</a>
-          <a href="#works">Vimeo ↗</a>
-          <a href="#works">YouTube ↗</a>
+          <a href="https://www.instagram.com/cliche.pictures?stkn=MTNuZW10MDQ4azM0dQ==">Instagram ↗</a>
+          <a href="https://www.youtube.com/@ClichePictures">YouTube ↗</a>
         </div>
       </div>
 

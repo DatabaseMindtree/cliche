@@ -65,7 +65,7 @@ export default function Work() {
     <section id="works" className="home__section wrap">
       <div className="home__head">
         <p className="home__kicker">Portfolio</p>
-        <h2 className="home__section-title">Now Streaming</h2>
+        <h2 className="home__section-title">Microdrama Series</h2>
         
       </div>
 

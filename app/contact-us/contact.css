@@ -4,6 +4,62 @@
    Uses the shared tokens defined on .home (see home/home.css).
    ================================================================== */
 
+/* ---- contact section with a black & white photo background ---- */
+.home__contact-section {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+/* the photo (grayscale) */
+.home__contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/loc.png") center / cover no-repeat;
+  filter: grayscale(100%);
+}
+/* dark overlay so the text stays readable */
+.home__contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 8, 10, 0.7) 0%,
+    rgba(8, 8, 10, 0.48) 55%,
+    rgba(8, 8, 10, 0.38) 100%
+  );
+}
+.home__contact-inner {
+  position: relative;
+  z-index: 1;
+}
+/* light text over the photo */
+.home__contact-section .home__section-title {
+  color: #fff;
+}
+.home__contact-section .home__head {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.home__contact-section .home__pitch {
+  color: #fff;
+}
+.home__contact-section .home__contact-label {
+  color: rgba(255, 255, 255, 0.55);
+}
+.home__contact-section .home__contact-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+.home__contact-section .home__contact-group a {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+.home__contact-section .home__contact-group a:hover {
+  border-color: #fff;
+}
+
 .home__contact {
   display: grid;
   grid-template-columns: 1fr 1fr;

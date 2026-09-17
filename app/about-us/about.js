@@ -7,12 +7,12 @@ const OWNERS = [
   { name: "Full Name", role: "Founder & Director" },
   { name: "Full Name", role: "Co-Founder & Producer" },
   { name: "Full Name", role: "Co-Founder & Editor" },
-  { name: "Full Name", role: "Co-Founder & Cinematographer" },
+  { name: "Sujith Padmanabhan", role: "Co-Founder & Director", img: "/sp/sp-1.jpeg", href: "/team/sp" },
 ];
 
 /* second row — the rest of the crew */
 const CREW = [
-  { name: "Full Name", role: "Cinematographer" },
+  { name: "Sujith Dinesh", role: "Director & Writer", img: "/sd/sd-img.jpeg", href: "/team/sd" },
   { name: "Full Name", role: "Editor" },
   { name: "Full Name", role: "Colorist" },
   { name: "Full Name", role: "Sound Design" },
@@ -28,7 +28,7 @@ function PersonIcon() {
   );
 }
 
-function Member({ name, role, img }) {
+function Member({ name, role, img, href }) {
   return (
     <figure className="home__member">
       <div className="home__member-media">
@@ -37,6 +37,11 @@ function Member({ name, role, img }) {
       <figcaption className="home__member-cap">
         <span className="home__member-name">{name}</span>
         <span className="home__member-role">{role}</span>
+        {href && (
+          <a className="home__member-link" href={href}>
+            View Profile →
+          </a>
+        )}
       </figcaption>
     </figure>
   );
@@ -53,15 +58,10 @@ export default function About() {
       {/* intro */}
       <div className="home__about">
         <p className="home__lead">
-          We&apos;re a small crew of filmmakers who believe the{" "}
-          <em>best stories are the honest ones</em> — written with care, shot with
-          patience, and cut with restraint.
+          We're a small crew of directors, producers and editors who believe honesty is what makes a story worth watching — shot with patience, cut with restraint.
         </p>
         <p className="home__body">
-          Cliché Pictures is a young studio, started in 2026, working across film,
-          documentary, microdrama and branded content. We keep every step in-house
-          — writing, direction, edit, VFX and sound — so each project keeps the
-          texture it started with, from first frame to final cut.
+        Founded in 2026, Cliché Pictures produces feature films, short films and micro dramas alongside branded content for clients who want their story told with intent. We control every step in-house — from development through color and sound — so the finished film keeps the texture it started with.
         </p>
       </div>
 
@@ -75,17 +75,10 @@ export default function About() {
             </span>
           </div>
 
-          {/* row 1 — owners (4) */}
+          {/* one uniform 4-per-row grid (owners first, then crew) */}
           <div className="home__team-row home__team-row--4">
-            {OWNERS.map((m, i) => (
-              <Member key={"o" + i} {...m} />
-            ))}
-          </div>
-
-          {/* row 2 — crew (6) */}
-          <div className="home__team-row home__team-row--6">
-            {CREW.map((m, i) => (
-              <Member key={"c" + i} {...m} />
+            {[...OWNERS, ...CREW].map((m, i) => (
+              <Member key={i} {...m} />
             ))}
           </div>
         </div>

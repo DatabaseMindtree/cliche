@@ -25,28 +25,28 @@ const SKILLS = [
 
 const WORK = [
   {
-    title: "Situationship — S1",
+    title: "Situationship",
     year: "2024",
     type: "Writer & Director · Micro-drama · 60M+ views",
-    img: "https://picsum.photos/seed/situationship/800/500",
+    img: "/sp/sp-11.jpeg",
   },
   {
     title: "Varuthu Pokku",
     year: "2023",
     type: "Writer & Director · Web Series · 35M+ views",
-    img: "https://picsum.photos/seed/varuthupokku/800/500",
+    img: "/sp/sp-12.jpeg",
   },
   {
     title: "Pearlish",
     year: "2022",
     type: "Director · with Pearle Maaney & Srinish Aravind",
-    img: "https://picsum.photos/seed/pearlish/800/500",
+    img: "/sp/sp-13.jpg",
   },
   {
     title: "Asiaville Originals",
     year: "2019–24",
     type: "Content Head · Digital Content",
-    img: "https://picsum.photos/seed/asiaville-sp/800/500",
+    img: "",
   },
 ];
 
