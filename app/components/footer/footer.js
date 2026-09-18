@@ -9,8 +9,7 @@ export default function Footer() {
             Cliché <span>Pictures</span>
           </a>
           <p className="footer__tagline">
-          No shortcuts. No filler.
-              instead of lets make something worth keeping.
+       No shortcuts. No filler. instead of lets make something worth keeping.
           </p>
         </div>
 
