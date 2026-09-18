@@ -9,8 +9,8 @@ export default function Footer() {
             Cliché <span>Pictures</span>
           </a>
           <p className="footer__tagline">
-            An independent film &amp; production studio telling deliberate, human
-            stories — from first frame to final cut.
+          No shortcuts. No filler.
+              instead of lets make something worth keeping.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="footer__col">
           <h4>Studio</h4>
           <a href="mailto:hello@clichepictures.com">clichepictures26@gmail.com</a>
-          <a href="tel:+10000000000">+91 9544418140</a>
+          <a href="tel:+91 9544418140">+91 9544418140</a>
           <a
             href="https://www.google.com/maps/search/Olivet+MC+Road+Panavely+Kottarakkara+Kollam+Kerala/@8.9852771,76.7862125,14.26z"
             target="_blank"

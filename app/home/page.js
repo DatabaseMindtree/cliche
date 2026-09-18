@@ -28,8 +28,8 @@ export default function HomePage() {
             </h1>
             <div className="home__lede">
               <p>
-                A production company telling deliberate, human stories — from first
-                frame to final cut.
+              No shortcuts. No filler.
+              instead of lets make something worth keeping.
               </p>
               <a className="home__scroll" href="#works">
                 View works →
