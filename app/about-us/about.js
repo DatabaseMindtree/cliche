@@ -4,9 +4,9 @@ import "./about.css";
    fill their card with a photo (files go in /public/team). */
 /* first row — the 4 owners */
 const OWNERS = [
-  { name: "Joy Mathew", role: "Founder & Director" , img: "/team/Melvin_Mathew.jpeg",},
+  { name: "Joy Mathew", role: "Founder and Managing Director" , img: "/team/Melvin_Mathew.jpeg",},
   { name: "Sujith Padmanabhan", role: "Co-Founder & Writer" ,img: "/team/pappu.jpeg"},
-  { name: "Anju", role: "Co-Founder & Editor" ,img: "/team/anju-001.jpeg"},
+  { name: "Anju Iype", role: "Co-Founder " ,img: "/team/anju-001.jpeg"},
   { name: "Jijo John", role: "Co-Founder", img: "/team/jijo1-001.jpeg"},
 ];
 
@@ -17,7 +17,7 @@ const CREW = [
    { name: "Jayakrishnan", role: "DOP" , img:  "/team/jk-01.jpeg" },
      { name: "Manish T K", role: "Editor", img: "/team/ikka-1.jpeg" },
   { name: "Akhil Maloor", role: "Project coordinator"   , img: "/team/maloor-1.jpeg"},
-{ name: "Sneha Uthaman", role: "Production" , img: "/team/sneha-01.jpeg" },
+{ name: "Sneha Uthaman", role: "Actress" , img: "/team/sneha-01.jpeg" },
  
 ];
 
