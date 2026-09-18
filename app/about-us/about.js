@@ -4,17 +4,17 @@ import "./about.css";
    fill their card with a photo (files go in /public/team). */
 /* first row — the 4 owners */
 const OWNERS = [
-  { name: "Full Name", role: "Founder & Director" },
-  { name: "Full Name", role: "Co-Founder & Producer" },
+  { name: "Joy Mathew", role: "Founder & Director" , img: "/team/Melvin_Mathew.jpeg",},
+  { name: "Sujith Padmanabhan", role: "Co-Founder & Producer" ,img: "/team/pappu.jpeg"},
   { name: "Full Name", role: "Co-Founder & Editor" },
-  { name: "Sujith Padmanabhan", role: "Co-Founder & Director", img: "/sp/sp-1.jpeg", href: "/team/sp" },
+  { name: "", role: "Co-Founder & Director", img: ""},
 ];
 
 /* second row — the rest of the crew */
 const CREW = [
-  { name: "Sujith Dinesh", role: "Director & Writer", img: "/sd/sd-img.jpeg", href: "/team/sd" },
-  { name: "Full Name", role: "Editor" },
-  { name: "Full Name", role: "Colorist" },
+  { name: "Sujith Dinesh", role: "Director & Actor", img: "/sd/sd-img.jpeg", href: "/team/sd" },
+  { name: "Akhil Maloor", role: "Editor"   , img: "/team/maloor-1.jpeg"},
+  { name: "Manish T K", role: "Editor", img: "/team/ikka-1.jpeg" },
   { name: "Full Name", role: "Sound Design" },
   { name: "Full Name", role: "Production" },
   { name: "Full Name", role: "Writer" },
@@ -37,11 +37,7 @@ function Member({ name, role, img, href }) {
       <figcaption className="home__member-cap">
         <span className="home__member-name">{name}</span>
         <span className="home__member-role">{role}</span>
-        {href && (
-          <a className="home__member-link" href={href}>
-            View Profile →
-          </a>
-        )}
+     
       </figcaption>
     </figure>
   );

@@ -17,12 +17,20 @@ const POSTERS = [
   "/img/Image-12.jpg",
 ];
 
+/* Edit titles/images here (files go in /public). */
+const OTHERS = [
+  { title: "Situationship", img: "/sp/sp-11.jpeg" },
+  { title: "Varuthu Pokku", img: "/sp/sp-12.jpeg" },
+  { title: "Pearlish", img: "/sp/sp-13.jpg" },
+   { title: "Law of Love", img: "/sp/sp-14.jpeg" },
+];
+
 export default function Work() {
   return (
     <section id="works" className="home__section wrap">
       <div className="home__head">
         <p className="home__kicker">Portfolio</p>
-        <h2 className="home__section-title">Microdrama Series</h2>
+        <h2 className="home__section-title">Original Productions</h2>
       </div>
 
       <div className="reel">
@@ -38,6 +46,9 @@ export default function Work() {
               <span>CRIME</span>
               <span>NO.45</span>
             </h3>
+            <p className="reel__views">
+              <strong>30 Million+</strong> Views
+            </p>
             <div className="reel__actions">
               <a
                 className="reel__btn reel__btn--play"
@@ -69,6 +80,37 @@ export default function Work() {
           </div>
         </div>
       </div>
+
+
+
+
+      <div className="home__head home__head--sub">
+        <p className="home__kicker">Portfolio</p>
+        <h2 className="home__section-title">Other Works</h2>
+      </div>
+
+      <div className="other-works">
+        {/* duplicated once for a seamless CSS marquee */}
+        <div className="other-works__track">
+          {[...OTHERS, ...OTHERS].map((w, i) => (
+            <a
+              key={i}
+              className="other-work"
+              href="#contact"
+              aria-hidden={i >= OTHERS.length ? true : undefined}
+              tabIndex={i >= OTHERS.length ? -1 : undefined}
+            >
+              <div className="other-work__media">
+                <img src={w.img} alt={w.title} />
+              </div>
+              <div className="other-work__cap">
+                <span className="other-work__title">{w.title}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
+    
   );
 }

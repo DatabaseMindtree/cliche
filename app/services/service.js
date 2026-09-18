@@ -3,28 +3,23 @@ import "./service.css";
 const SERVICES = [
   {
     no: "01",
-    title: "Direction",
-    desc: "From treatment to final cut, we shape the story and lead it on set.",
+    title: "Film Making",
+    desc: "End-to-end production — from concept and direction to the final cut.",
   },
   {
     no: "02",
-    title: "Production",
-    desc: "Budgets, crew, locations and logistics — handled end to end.",
+    title: "Screenplay",
+    desc: "Original scripts and story development built around character and emotion.",
   },
   {
     no: "03",
-    title: "Cinematography",
-    desc: "Camera, lighting and lensing that give every frame its intent.",
+    title: "Editing & VFX",
+    desc: "Assembly, finishing and visual effects that bring the film together.",
   },
   {
     no: "04",
-    title: "Editing & Post",
-    desc: "Assembly, VFX and finishing that keep the story tight.",
-  },
-  {
-    no: "05",
-    title: "Color & Sound",
-    desc: "Grade and mix that give the film its final texture.",
+    title: "Graphic Design",
+    desc: "Posters, titles and brand visuals that give each project its identity.",
   },
 ];
 
