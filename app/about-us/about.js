@@ -5,19 +5,20 @@ import "./about.css";
 /* first row — the 4 owners */
 const OWNERS = [
   { name: "Joy Mathew", role: "Founder & Director" , img: "/team/Melvin_Mathew.jpeg",},
-  { name: "Sujith Padmanabhan", role: "Co-Founder & Producer" ,img: "/team/pappu.jpeg"},
-  { name: "Full Name", role: "Co-Founder & Editor" },
-  { name: "", role: "Co-Founder & Director", img: ""},
+  { name: "Sujith Padmanabhan", role: "Co-Founder & Writer" ,img: "/team/pappu.jpeg"},
+  { name: "Anju", role: "Co-Founder & Editor" ,img: "/team/anju-001.jpeg"},
+  { name: "Jijo John", role: "Co-Founder", img: "/team/jijo1-001.jpeg"},
 ];
 
 /* second row — the rest of the crew */
 const CREW = [
-  { name: "Sujith Dinesh", role: "Director & Actor", img: "/sd/sd-img.jpeg", href: "/team/sd" },
-  { name: "Akhil Maloor", role: "Editor"   , img: "/team/maloor-1.jpeg"},
-  { name: "Manish T K", role: "Editor", img: "/team/ikka-1.jpeg" },
-  { name: "Full Name", role: "Sound Design" },
-  { name: "Full Name", role: "Production" },
-  { name: "Full Name", role: "Writer" },
+  { name: "Sujith Dinesh", role: "Creative Head", img: "/team/sd-001.jpeg"},
+   { name: "Vipin Nadanchery", role: "DOP" , img: "/team/vipi.jpeg" },
+   { name: "Jayakrishnan", role: "DOP" , img:  "/team/jk-01.jpeg" },
+     { name: "Manish T K", role: "Editor", img: "/team/ikka-1.jpeg" },
+  { name: "Akhil Maloor", role: "Project coordinator"   , img: "/team/maloor-1.jpeg"},
+{ name: "Sneha Uthaman", role: "Production" , img: "/team/sneha-01.jpeg" },
+ 
 ];
 
 function PersonIcon() {

@@ -3,7 +3,7 @@ import "./sd.css";
 /* route: /team/sd  —  Sujith Dinesh, filmmaker & content lead */
 
 /* Demo portrait — replace with the real photo later, e.g. /team/sd.jpg */
-const PHOTO = "/sd/sd-img.jpeg";
+const PHOTO = "/team/sd-001.jpeg";
 
 const STATS = [
   { num: "30M+", label: "Views · “Vala”" },
@@ -29,7 +29,7 @@ const SKILLS = [
 const WORK = [
   { title: "Crime No.45", year: "2026", type: "Direction & Acting", img: "/img/Image-2.jpg" },
   { title: "Vala", year: "2024", type: "Writer & Director · 15-ep Microdrama", img: "/sd/sd-01.jpeg" },
-  { title: "Asiaville Originals", year: "2022–24", type: "Director · Shorts, Sketches, Brand", img: "/img/Image-5.jpg" },
+  { title: "Asiaville Originals", year: "2022–24", type: "Director · Shorts, Sketches, Brand", img: "" },
   { title: "Rorschach", year: "2023", type: "VFX", img: "/sd/sd-03.jpeg" },
   { title: "Kantara", year: "2022", type: "VFX", img: "/sd/sd-02.jpeg" },
 ];

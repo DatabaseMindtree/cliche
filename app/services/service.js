@@ -18,6 +18,11 @@ const SERVICES = [
   },
   {
     no: "04",
+    title: "Color & Sound",
+    desc: "Grading, mixing and score that set the mood and give the picture depth.",
+  },
+  {
+    no: "05",
     title: "Graphic Design",
     desc: "Posters, titles and brand visuals that give each project its identity.",
   },

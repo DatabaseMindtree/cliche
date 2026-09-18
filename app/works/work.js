@@ -23,6 +23,8 @@ const OTHERS = [
   { title: "Varuthu Pokku", img: "/sp/sp-12.jpeg" },
   { title: "Pearlish", img: "/sp/sp-13.jpg" },
    { title: "Law of Love", img: "/sp/sp-14.jpeg" },
+   { title: "Dear Lachu", img: "/others/others-01.jpeg" },
+   { title: "Pooja Ki Jawani", img: "/others/others-02.jpeg" },
 ];
 
 export default function Work() {

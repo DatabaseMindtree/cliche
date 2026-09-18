@@ -3,7 +3,7 @@ import "./sp.css";
 /* route: /team/sp  —  Sujith Padmanabhan, director & writer */
 
 /* Demo portrait — replace with the real photo later, e.g. /sp/sp-img.jpeg */
-const PHOTO = "/sp/sp-1.jpeg";
+const PHOTO =  "/team/pappu.jpeg";
 
 const STATS = [
   { num: "60M+", label: "Views · “Situationship”" },
